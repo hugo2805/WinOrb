@@ -15,7 +15,6 @@ DefaultGroupName={#AppName}
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 DisableProgramGroupPage=yes
-PrivilegesRequired=lowest
 OutputDir=.\Output
 OutputBaseFilename={#AppName}_Setup
 SetupIconFile=.\logo.ico
