@@ -15,6 +15,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          lfs: true  # Assure que les fichiers gérés par Git LFS sont bien récupérés
+
+      - name: Pull LFS files
+        run: git lfs pull
+        shell: bash
 
       - name: Extract version from tag
         run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
