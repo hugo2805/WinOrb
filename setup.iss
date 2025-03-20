@@ -18,7 +18,6 @@ DisableProgramGroupPage=yes
 OutputDir=.\Output
 OutputBaseFilename={#AppName}_Setup
 SetupIconFile=.\logo.ico
-Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
 WizardImageFile=.\cover.bmp
