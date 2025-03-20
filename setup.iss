@@ -17,6 +17,8 @@ OutputBaseFilename={#AppName}_Setup_{#AppVersion}
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
+WizardImageFile=.\cover.bmp
+WizardSmallImageFile=.\Logo.bmp
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
