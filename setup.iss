@@ -2,8 +2,7 @@
 #define AppPublisher "Orb Project Management, SAS"
 #define MyAppURL "https://orbprojectmanagement.com"
 #define AppExeName "OrbProject.exe"
-#define AppSourceDir "\OrbProject"
-
+#define AppSourceDir "OrbProject"
 
 [Setup]
 AppId={{369F2C6A-D016-4DA1-B76A-D73FF049BA1C}}
@@ -12,22 +11,16 @@ AppVersion={#AppVersion}
 AppPublisher={#AppPublisher}
 DefaultDirName={autopf}\{#AppName}
 DefaultGroupName={#AppName}
-ArchitecturesAllowed=x64compatible
-ArchitecturesInstallIn64BitMode=x64compatible
-DisableProgramGroupPage=yes
 OutputDir=.\Output
 OutputBaseFilename={#AppName}_Setup
-SetupIconFile=.\logo.ico
+Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
-WizardImageFile=.\cover.bmp
-WizardSmallImageFile=.\Logo.bmp
 DisableDirPage=yes
-AlwaysOverwrite=yes
+DisableProgramGroupPage=yes
 OverwriteUninstRegEntries=yes
 Uninstallable=yes
 ShowLanguageDialog=no
-
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -58,15 +51,12 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"
 
-[Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-
 [Files]
-Source: "OrbProject\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs
+Source: "{#AppSourceDir}\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion
 
 [Icons]
 Name: "{group}\{#AppName}"; Filename: "{app}\{#AppExeName}"
-Name: "{commondesktop}\{#AppName}"; Filename: "{app}\{#AppExeName}";
+Name: "{commondesktop}\{#AppName}"; Filename: "{app}\{#AppExeName}"; Flags: runascurrentuser
 
 [Run]
 Filename: "{app}\{#AppExeName}"; Description: "Lancer {#AppName}"; Flags: nowait postinstall
