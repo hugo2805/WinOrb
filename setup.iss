@@ -18,7 +18,6 @@ SolidCompression=yes
 WizardStyle=modern
 DisableDirPage=yes
 DisableProgramGroupPage=yes
-OverwriteUninstRegEntries=yes
 Uninstallable=yes
 ShowLanguageDialog=no
 
