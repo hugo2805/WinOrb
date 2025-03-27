@@ -23,7 +23,6 @@ WizardStyle=modern
 WizardImageFile=.\cover.bmp
 WizardSmallImageFile=.\Logo.bmp
 DisableDirPage=yes
-DisableProgramGroupPage=yes
 AlwaysOverwrite=yes
 OverwriteUninstRegEntries=yes
 Uninstallable=yes
